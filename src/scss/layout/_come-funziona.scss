@@ -1,0 +1,132 @@
+.section-funziona {
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(#270051, #16002d);
+  padding: 100px 0;
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .section-funziona-title {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 59px;
+      color: #0de2ff;
+      margin-bottom: 74px;
+    }
+
+    .section-funziona-list {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &::after {
+        content: "";
+        height: 15px;
+        width: 15px;
+        background-color: #0de2ff;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &::before {
+        content: "";
+        height: 15px;
+        width: 15px;
+        background-color: #0de2ff;
+        position: absolute;
+        top: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .list-item {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        width: 488px;
+        margin-bottom: 30px;
+
+        &:nth-child(even) {
+          margin-left: auto;
+          justify-content: flex-start;
+
+          &::after {
+            right: 554px;
+          }
+        }
+
+        &::after {
+          content: "";
+          width: 22px;
+          height: 22px;
+          background-color: #270051;
+          border: 5px solid #0de2ff;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          right: -98px;
+          z-index: 1;
+        }
+
+        .list-item-box-img {
+          position: absolute;
+          top: 50%;
+          right: 280px;
+          transform: translateY(-50%);
+
+          &:nth-child(even) {
+            right: 0;
+          }
+        }
+
+        .list-item-content {
+          width: 262px;
+          text-align: right;
+
+          &:nth-child(odd) > .list-item-title {
+            width: 315px;
+            text-align: left;
+          }
+
+          &:nth-child(odd) > .list-item-description {
+            width: 264px;
+            text-align: left;
+          }
+
+          .list-item-title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #0de2ff;
+            margin-bottom: 17px;
+          }
+
+          .list-item-description {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            width: 264px;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .section-funziona-line {
+      height: 915px;
+      width: 3px;
+      background-color: #0de2ff;
+      position: absolute;
+      top: 92px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+  }
+}
